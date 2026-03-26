@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>हज़रत ग्यासुद्दीन अंसारी - रूहानी इलाज व दुआ तावीज़</title>
+<title>हज़रत ग्यासुद्दीन अंसारी — रूहानी इलाज, दुआ तावीज़, रक्सौल बिहार</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&family=Noto+Serif+Devanagari:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -11,14 +11,41 @@
 </head>
 <body>
 
-<!-- Floating particles -->
 <div class="particles" id="particles"></div>
+
+<!-- ===== POPUP ===== -->
+<div id="sitePopup" class="popup-overlay">
+  <div class="popup-box">
+    <button class="popup-close" onclick="closePopup()">✕</button>
+    <div class="popup-icon">🌙</div>
+    <div class="popup-bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+    <h3>क्या आप किसी परेशानी में हैं?</h3>
+    <p style="color:#666; margin-bottom:16px;">हमें एक बार सेवा का मौका दें — इन्शाअल्लाह फ़ायदा होगा</p>
+    <div class="popup-problems">
+      <span>🧿 बुरी नज़र</span>
+      <span>👻 भूत-प्रेत</span>
+      <span>💍 शादी रुकावट</span>
+      <span>💼 कारोबार नुकसान</span>
+      <span>❤️ पारिवारिक झगड़े</span>
+      <span>🌿 बीमारी / डिप्रेशन</span>
+      <span>💰 क़र्ज़ से मुक्ति</span>
+      <span>👶 औलाद न होना</span>
+      <span>🧠 मानसिक तनाव</span>
+      <span>💔 टूटा रिश्ता</span>
+    </div>
+    <p class="popup-tagline">हज़रत जी से एक बार ज़रूर मिलें — पहली सलाह मुफ़्त!</p>
+    <div class="popup-btns">
+      <a href="tel:+919779738917" class="btn btn-gold"><i class="fas fa-phone me-2"></i>अभी कॉल करें</a>
+      <a href="https://wa.me/919779738917?text=السلام عليكم، मुझे रूहानी इलाज के बारे में बात करनी है।" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp me-2"></i>WhatsApp</a>
+    </div>
+  </div>
+</div>
 
 <!-- Top Bar -->
 <div class="topbar">
   <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
     <span><i class="fas fa-phone-alt me-2"></i>+91 97797 38917</span>
-    <span><i class="fas fa-map-marker-alt me-2"></i>लोहारा, लुधियाना, पंजाब</span>
+    <span><i class="fas fa-map-marker-alt me-2"></i>रक्सौल, पूर्वी चम्पारण, बिहार</span>
     <span><i class="fas fa-clock me-2"></i>सुबह 9 बजे – रात 9 बजे</span>
   </div>
 </div>
@@ -41,107 +68,189 @@
         <li class="nav-item"><a class="nav-link" href="certificate.html">📜 प्रमाण पत्र</a></li>
         <li class="nav-item"><a class="nav-link" href="gallery.html">🎬 वीडियो/गैलरी</a></li>
         <li class="nav-item"><a class="nav-link" href="testimonials.html">💬 समीक्षाएं</a></li>
+        <li class="nav-item"><a class="nav-link" href="online.html">💻 ऑनलाइन</a></li>
         <li class="nav-item"><a class="nav-link btn-contact" href="contact.html">📞 संपर्क</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Hero Section -->
-<section class="hero-section">
-  <div class="hero-overlay"></div>
-  <div class="container hero-content text-center">
-    <div class="bismillah-text">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
-    <h1 class="hero-title">हज़रत ग्यासुद्दीन अंसारी</h1>
-    <p class="hero-subtitle">रूहानी इलाज विशेषज्ञ | दुआ-तावीज़ | भूत-प्रेत छुटकारा | नज़र उतारना | कारोबार-परेशानी हल</p>
-    <div class="hero-badge">गोस पाक मुस्लिम इंतेज़ामिया कमेटी — पंजाब सरकार पंजीकृत संस्था</div>
-    <div class="hero-btns mt-4">
-      <a href="contact.html" class="btn btn-gold me-3">अभी संपर्क करें</a>
-      <a href="services.html" class="btn btn-outline-light">हमारी सेवाएं देखें</a>
+<!-- ===== HERO CAROUSEL ===== -->
+<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4500">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="carousel-slide cs1">
+        <div class="carousel-overlay"></div>
+        <div class="container carousel-content text-center">
+          <div class="bismillah-text">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+          <h1 class="hero-title">हज़रत ग्यासुद्दीन अंसारी</h1>
+          <p class="hero-subtitle">रूहानी इलाज विशेषज्ञ — रक्सौल, पूर्वी चम्पारण, बिहार</p>
+          <div class="hero-badge">पंजाब सरकार पंजीकृत | गोस पाक मुस्लिम इंतेज़ामिया कमेटी</div>
+          <div class="hero-btns mt-4">
+            <a href="contact.html" class="btn btn-gold me-3">अभी संपर्क करें</a>
+            <a href="online.html" class="btn btn-outline-light">ऑनलाइन परामर्श</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="carousel-slide cs2">
+        <div class="carousel-overlay"></div>
+        <div class="container carousel-content text-center">
+          <div class="slide-tag-hero">🧿 नज़र व जादू-टोने से छुटकारा</div>
+          <h1 class="hero-title">बुरी नज़र और जादू से मुक्ति</h1>
+          <p class="hero-subtitle">कुरआनी आयतों और रूहानी दम से — पूर्ण व स्थायी इलाज</p>
+          <a href="services.html" class="btn btn-gold mt-3">सेवाएं देखें</a>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="carousel-slide cs3">
+        <div class="carousel-overlay"></div>
+        <div class="container carousel-content text-center">
+          <div class="slide-tag-hero">💻 घर बैठे ऑनलाइन सेवा</div>
+          <h1 class="hero-title">ऑनलाइन रूहानी परामर्श</h1>
+          <p class="hero-subtitle">WhatsApp, फ़ोन या Video Call — देश-विदेश हर जगह सेवा</p>
+          <a href="online.html" class="btn btn-gold mt-3">अभी बुक करें</a>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="carousel-slide cs4">
+        <div class="carousel-overlay"></div>
+        <div class="container carousel-content text-center">
+          <div class="slide-tag-hero">💍 शादी-विवाह की रुकावट</div>
+          <h1 class="hero-title">शादी की रुकावट दूर करें</h1>
+          <p class="hero-subtitle">रिश्ते न आना, पारिवारिक विरोध — दुआ व तावीज़ से समाधान</p>
+          <a href="services.html" class="btn btn-gold mt-3">और जानें</a>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="carousel-slide cs5">
+        <div class="carousel-overlay"></div>
+        <div class="container carousel-content text-center">
+          <div class="slide-tag-hero">💼 कारोबार में बरकत</div>
+          <h1 class="hero-title">व्यापार में तरक्की पाएं</h1>
+          <p class="hero-subtitle">कारोबार में नुकसान, नौकरी न मिलना — रूहानी इलाज से समाधान</p>
+          <a href="contact.html" class="btn btn-gold mt-3">संपर्क करें</a>
+        </div>
+      </div>
     </div>
   </div>
-</section>
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+</div>
 
 <!-- Stats Bar -->
 <div class="stats-bar">
   <div class="container">
     <div class="row text-center g-0">
-      <div class="col-6 col-md-3 stat-item">
-        <div class="stat-num">15+</div>
-        <div class="stat-label">वर्षों का अनुभव</div>
-      </div>
-      <div class="col-6 col-md-3 stat-item">
-        <div class="stat-num">5000+</div>
-        <div class="stat-label">संतुष्ट परिवार</div>
-      </div>
-      <div class="col-6 col-md-3 stat-item">
-        <div class="stat-num">100%</div>
-        <div class="stat-label">कुरआन व सुन्नत आधारित</div>
-      </div>
-      <div class="col-6 col-md-3 stat-item">
-        <div class="stat-num">24/7</div>
-        <div class="stat-label">ऑनलाइन सहायता</div>
-      </div>
+      <div class="col-6 col-md-3 stat-item"><div class="stat-num">15+</div><div class="stat-label">वर्षों का अनुभव</div></div>
+      <div class="col-6 col-md-3 stat-item"><div class="stat-num">5000+</div><div class="stat-label">संतुष्ट परिवार</div></div>
+      <div class="col-6 col-md-3 stat-item"><div class="stat-num">100%</div><div class="stat-label">कुरआन व सुन्नत आधारित</div></div>
+      <div class="col-6 col-md-3 stat-item"><div class="stat-num">24/7</div><div class="stat-label">ऑनलाइन सहायता</div></div>
     </div>
   </div>
 </div>
 
-<!-- Services Preview -->
+<!-- Social Bar -->
+<div class="social-bar">
+  <div class="container text-center">
+    <span class="me-3 social-label">हमसे जुड़ें:</span>
+    <a href="https://facebook.com/YourPageName" target="_blank" class="social-link-btn fb-btn"><i class="fab fa-facebook-f me-1"></i>Facebook</a>
+    <a href="https://wa.me/919779738917" target="_blank" class="social-link-btn wa-btn"><i class="fab fa-whatsapp me-1"></i>WhatsApp</a>
+    <a href="https://youtube.com/@YourChannel" target="_blank" class="social-link-btn yt-btn"><i class="fab fa-youtube me-1"></i>YouTube</a>
+    <a href="tel:+919779738917" class="social-link-btn call-btn"><i class="fas fa-phone me-1"></i>कॉल</a>
+  </div>
+</div>
+
+<!-- Services -->
 <section class="section-padded bg-light-pattern">
   <div class="container">
     <div class="section-title text-center mb-5">
       <span class="section-tag">हमारी सेवाएं</span>
       <h2>क्या आप इन समस्याओं से परेशान हैं?</h2>
-      <p class="section-sub">अल्लाह के करम से हर मर्ज़ का इलाज है — हज़रत जी से मिलें</p>
+      <p class="section-sub">हज़रत जी से एक बार मिलें — अल्लाह के करम से हर मर्ज़ का इलाज है</p>
     </div>
     <div class="row g-4">
-      <div class="col-md-4 col-sm-6">
-        <div class="service-card">
-          <div class="service-icon">🧿</div>
-          <h4>नज़र व जादू से छुटकारा</h4>
-          <p>बुरी नज़र, जादू-टोना, काला जादू से पूर्ण मुक्ति — कुरआनी आयतों और रूहानी तरीके से।</p>
-          <a href="services.html" class="service-link">और जानें →</a>
+      <div class="col-md-4 col-sm-6"><div class="service-card"><div class="service-icon">🧿</div><h4>नज़र व जादू-टोने से छुटकारा</h4><p>बुरी नज़र, काला जादू, तंत्र-मंत्र का असर — कुरआनी रूकया से पूर्ण मुक्ति।</p><a href="services.html" class="service-link">और जानें →</a></div></div>
+      <div class="col-md-4 col-sm-6"><div class="service-card"><div class="service-icon">👻</div><h4>भूत-प्रेत व जिन्न से मुक्ति</h4><p>जिन्न व शैतानी असर से बचाव — दम-दरूद और रूकया शरई से इलाज।</p><a href="services.html" class="service-link">और जानें →</a></div></div>
+      <div class="col-md-4 col-sm-6"><div class="service-card"><div class="service-icon">💍</div><h4>शादी-विवाह में रुकावट</h4><p>रिश्ते न आना, शादी में देरी — दुआ व तावीज़ से समाधान।</p><a href="services.html" class="service-link">और जानें →</a></div></div>
+      <div class="col-md-4 col-sm-6"><div class="service-card"><div class="service-icon">💼</div><h4>कारोबार व रोज़गार</h4><p>व्यापार में नुकसान, नौकरी न मिलना — बरकत की दुआ व तावीज़।</p><a href="services.html" class="service-link">और जानें →</a></div></div>
+      <div class="col-md-4 col-sm-6"><div class="service-card"><div class="service-icon">❤️‍🩹</div><h4>घरेलू कलह व तनाव</h4><p>पति-पत्नी झगड़े, परिवार में अशांति — रूहानी इलाज से शांति।</p><a href="services.html" class="service-link">और जानें →</a></div></div>
+      <div class="col-md-4 col-sm-6"><div class="service-card online-card"><div class="service-icon">💻</div><h4>ऑनलाइन परामर्श</h4><p>घर बैठे WhatsApp या Video Call से रूहानी इलाज — देश-विदेश सेवा।</p><a href="online.html" class="service-link">बुक करें →</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Photo Carousel -->
+<section class="section-padded" style="background:var(--green-dark); position:relative;">
+  <div class="container">
+    <div class="section-title text-center mb-4">
+      <span class="section-tag">गैलरी</span>
+      <h2 style="color:white; margin-top:10px;">हमारी फ़ोटो गैलरी</h2>
+    </div>
+    <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row g-3">
+            <div class="col-md-4 col-6"><div class="photo-frame"><img src="./Gallary/photo1.jpeg" alt="हज़रत जी" onerror="this.parentElement.innerHTML='<div class=pfill>☪<br><span>हज़रत जी</span></div>'"></div></div>
+            <div class="col-md-4 col-6"><div class="photo-frame"><img src="./Gallary/photo2.jpeg" alt="हज़रत जी 2" onerror="this.parentElement.innerHTML='<div class=pfill>🌙<br><span>रूहानी इलाज</span></div>'"></div></div>
+            <div class="col-md-4 col-6 d-none d-md-block"><div class="photo-frame"><img src="certificate.jpg" alt="प्रमाण पत्र" onerror="this.parentElement.innerHTML='<div class=pfill>📜<br><span>प्रमाण पत्र</span></div>'"></div></div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row g-3">
+            <div class="col-md-4 col-6"><div class="photo-frame"><img src="photo1.jpg" alt="फ़ोटो 1" onerror="this.parentElement.innerHTML='<div class=pfill>🕌<br><span>इलाज का स्थान</span></div>'"></div></div>
+            <div class="col-md-4 col-6"><div class="photo-frame"><img src="photo2.jpg" alt="फ़ोटो 2" onerror="this.parentElement.innerHTML='<div class=pfill>📿<br><span>दुआ तावीज़</span></div>'"></div></div>
+            <div class="col-md-4 col-6 d-none d-md-block"><div class="photo-frame"><img src="photo3.jpg" alt="फ़ोटो 3" onerror="this.parentElement.innerHTML='<div class=pfill>🌿<br><span>रूहानी सेवा</span></div>'"></div></div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row g-3">
+            <div class="col-md-4 col-6"><div class="photo-frame"><img src="photo4.jpg" alt="फ़ोटो 4" onerror="this.parentElement.innerHTML='<div class=pfill>⭐<br><span>हज़रत जी</span></div>'"></div></div>
+            <div class="col-md-4 col-6"><div class="photo-frame"><img src="photo5.jpg" alt="फ़ोटो 5" onerror="this.parentElement.innerHTML='<div class=pfill>🌟<br><span>रूहानी नूर</span></div>'"></div></div>
+            <div class="col-md-4 col-6 d-none d-md-block"><div class="photo-frame"><img src="aadhar-card.jpg" alt="पहचान पत्र" onerror="this.parentElement.innerHTML='<div class=pfill>🪪<br><span>पहचान पत्र</span></div>'"></div></div>
+          </div>
         </div>
       </div>
-      <div class="col-md-4 col-sm-6">
-        <div class="service-card">
-          <div class="service-icon">👻</div>
-          <h4>भूत-प्रेत व जिन्न से मुक्ति</h4>
-          <p>जिन्न व शैतानी असर से बचाव और इलाज, दम-दरूद और रूकया शरई से।</p>
-          <a href="services.html" class="service-link">और जानें →</a>
+      <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+      <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+    </div>
+    <div class="text-center mt-4"><a href="gallery.html" class="btn btn-outline-gold">सभी फ़ोटो व वीडियो देखें</a></div>
+  </div>
+</section>
+
+<!-- Certificate Highlight -->
+<section class="section-padded" style="background:#f5f0e6;">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5 text-center">
+        <img src="certificate.jpg" alt="प्रमाण पत्र" style="max-width:100%; border-radius:16px; border:4px solid var(--gold); box-shadow:0 10px 40px rgba(201,168,76,0.3);"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div style="display:none; max-width:380px; margin:auto; background:linear-gradient(135deg,#1a472a,#0d2b1a); border-radius:16px; padding:50px 30px; border:4px solid #c9a84c; align-items:center; justify-content:center; flex-direction:column; color:#c9a84c; text-align:center;">
+          <div style="font-size:4rem; margin-bottom:16px;">📜</div>
+          <h5>CERTIFICATE OF REGISTRATION</h5>
+          <p style="color:#d4c5a0; font-size:0.85rem; margin-top:8px;">No. 231 / 2024-2025<br>पंजाब सरकार द्वारा जारी<br>18 नवंबर 2024</p>
         </div>
       </div>
-      <div class="col-md-4 col-sm-6">
-        <div class="service-card">
-          <div class="service-icon">💍</div>
-          <h4>शादी-विवाह में रुकावट</h4>
-          <p>रिश्ते न आना, शादी में देरी, पारिवारिक झगड़े — दुआ व तावीज़ से समाधान।</p>
-          <a href="services.html" class="service-link">और जानें →</a>
+      <div class="col-lg-7">
+        <span class="section-tag">आधिकारिक मान्यता</span>
+        <h2 style="color:var(--green-dark); font-weight:900; margin:12px 0 16px;">पंजाब सरकार द्वारा पंजीकृत संस्था</h2>
+        <p style="color:var(--text-muted); line-height:1.9; margin-bottom:20px;">हज़रत जी की संस्था <strong>गोस पाक मुस्लिम इंतेज़ामिया कमेटी</strong> को पंजाब सरकार ने आधिकारिक रूप से पंजीकृत किया है। यह प्रमाण है कि हमारी सेवा पूरी तरह क़ानूनी, पारदर्शी और विश्वसनीय है।</p>
+        <div class="row g-3 mb-4">
+          <div class="col-sm-6"><div style="background:white; border-radius:10px; padding:14px; border-left:3px solid var(--gold);"><strong style="color:var(--green-dark);">पंजीकरण संख्या</strong><br><span style="color:var(--text-muted); font-size:0.9rem;">231 / 2024-2025</span></div></div>
+          <div class="col-sm-6"><div style="background:white; border-radius:10px; padding:14px; border-left:3px solid var(--gold);"><strong style="color:var(--green-dark);">जारी तिथि</strong><br><span style="color:var(--text-muted); font-size:0.9rem;">18 नवंबर 2024</span></div></div>
         </div>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <div class="service-card">
-          <div class="service-icon">💼</div>
-          <h4>कारोबार व रोज़गार</h4>
-          <p>व्यापार में नुकसान, नौकरी न मिलना, आर्थिक परेशानियों का रूहानी समाधान।</p>
-          <a href="services.html" class="service-link">और जानें →</a>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <div class="service-card">
-          <div class="service-icon">❤️‍🩹</div>
-          <h4>घरेलू कलह व तनाव</h4>
-          <p>पति-पत्नी में झगड़े, परिवार में अशांति, मानसिक तनाव से राहत पाएं।</p>
-          <a href="services.html" class="service-link">और जानें →</a>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <div class="service-card">
-          <div class="service-icon">🌿</div>
-          <h4>बीमारी व मानसिक शांति</h4>
-          <p>लाइलाज बीमारी, डिप्रेशन, घबराहट — रूहानी तावीज़ और दुआ से इलाज।</p>
-          <a href="services.html" class="service-link">और जानें →</a>
-        </div>
+        <a href="certificate.html" class="btn btn-gold">प्रमाण पत्र देखें</a>
       </div>
     </div>
   </div>
@@ -153,27 +262,55 @@
     <div class="row align-items-center g-5">
       <div class="col-lg-5 text-center">
         <div class="about-img-wrap">
-          <img src="hazrat-photo.jpg" alt="हज़रत ग्यासुद्दीन अंसारी" class="about-photo" onerror="this.src='https://via.placeholder.com/400x500/1a472a/gold?text=हज़रत+जी'">
+          <img src="hazrat-photo.jpg" alt="हज़रत जी" class="about-photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <div style="display:none;width:340px;height:420px;max-width:100%;background:linear-gradient(135deg,#2d6a4f,#0d2b1a);border-radius:20px;border:4px solid #c9a84c;align-items:center;justify-content:center;flex-direction:column;color:#c9a84c;font-size:5rem;margin:auto;">☪<br><span style="font-size:1rem;color:#d4c5a0;">हज़रत जी</span></div>
           <div class="about-img-badge">पंजाब सरकार<br>पंजीकृत</div>
         </div>
       </div>
       <div class="col-lg-7">
         <span class="section-tag">हमारे बारे में</span>
         <h2 class="about-title">हज़रत ग्यासुद्दीन अंसारी</h2>
-        <p class="about-desc">हज़रत जी 15 से अधिक वर्षों से इस्लामी रूहानी इलाज के क्षेत्र में सेवारत हैं। उनका काम पूरी तरह कुरआन और सुन्नत पर आधारित है। वे पंजाब सरकार के तहत पंजीकृत <strong>गोस पाक मुस्लिम इंतेज़ामिया कमेटी</strong> के माध्यम से हज़ारों परिवारों की मदद कर चुके हैं।</p>
+        <p class="about-desc">हज़रत जी 15 से अधिक वर्षों से इस्लामी रूहानी इलाज के क्षेत्र में सेवारत हैं। उनका काम पूरी तरह कुरआन और सुन्नत पर आधारित है।</p>
         <ul class="about-points">
           <li>✅ पंजाब सरकार द्वारा पंजीकृत संस्था</li>
           <li>✅ कुरआन व हदीस के अनुसार इलाज</li>
-          <li>✅ देश-विदेश से मरीज़ लाभान्वित</li>
           <li>✅ ऑनलाइन व ऑफलाइन दोनों सुविधा</li>
+          <li>✅ रक्सौल, बिहार में व्यक्तिगत मुलाक़ात उपलब्ध</li>
         </ul>
+        <div class="mt-3 p-3" style="background:rgba(201,168,76,0.15);border-radius:12px;border:1px solid rgba(201,168,76,0.3);">
+          <i class="fas fa-map-marker-alt me-2" style="color:var(--gold);"></i>
+          <span style="color:#d4c5a0;font-size:0.88rem;">कॉलेज रोड, रक्सौल | रेलवे कॉलोनी के पास | वार्ड नं. 2 | रक्सौल सेंट्रल स्कूल के पास | पूर्वी चम्पारण, बिहार – 845305</span>
+        </div>
         <a href="about.html" class="btn btn-gold mt-3">पूरा परिचय पढ़ें</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Testimonial Preview -->
+<!-- Online Banner -->
+<section class="online-banner section-padded">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-8">
+        <span class="section-tag">💻 नई सेवा</span>
+        <h2 style="color:white;font-weight:900;margin:12px 0 10px;">ऑनलाइन रूहानी परामर्श — घर बैठे</h2>
+        <p style="color:#c8d8c0;line-height:1.8;">दूर रहते हैं? कोई बात नहीं! WhatsApp, फ़ोन कॉल या Video Call के ज़रिए हज़रत जी से सीधे बात करें।</p>
+        <div class="row g-3 mt-2">
+          <div class="col-sm-4"><div class="online-feat"><i class="fab fa-whatsapp"></i> WhatsApp</div></div>
+          <div class="col-sm-4"><div class="online-feat"><i class="fas fa-phone"></i> फ़ोन कॉल</div></div>
+          <div class="col-sm-4"><div class="online-feat"><i class="fas fa-video"></i> Video Call</div></div>
+        </div>
+      </div>
+      <div class="col-lg-4 text-center">
+        <a href="online.html" class="btn btn-gold btn-lg d-block mb-3">ऑनलाइन अपॉइंटमेंट लें</a>
+        <a href="https://wa.me/919779738917?text=ऑनलाइन परामर्श चाहिए" target="_blank" class="btn btn-whatsapp btn-lg d-block"><i class="fab fa-whatsapp me-2"></i>WhatsApp करें</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
 <section class="section-padded testimonial-bg">
   <div class="container">
     <div class="section-title text-center mb-5">
@@ -181,31 +318,11 @@
       <h2>जिन्होंने फ़ायदा उठाया उनकी बात</h2>
     </div>
     <div class="row g-4">
-      <div class="col-md-4">
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <p>"मेरी बेटी को जादू-टोने का असर था, हज़रत जी के दम और तावीज़ से अल्हम्दुलिल्लाह बिल्कुल ठीक है।"</p>
-          <div class="testi-name">— रहीम खान, लुधियाना</div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <p>"कारोबार बिल्कुल बंद हो गया था, हज़रत जी से मिला और तावीज़ लिया, अब माशाअल्लाह बरकत है।"</p>
-          <div class="testi-name">— सुनील वर्मा, जालंधर</div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <p>"शादी में 5 साल से रुकावट थी, हज़रत जी की दुआ से 3 महीने में रिश्ता तय हो गया।"</p>
-          <div class="testi-name">— फ़रहाना बेगम, अमृतसर</div>
-        </div>
-      </div>
+      <div class="col-md-4"><div class="testi-card"><div class="testi-stars">★★★★★</div><p>"मेरी बेटी को जादू-टोने का असर था, हज़रत जी के दम और तावीज़ से अल्हम्दुलिल्लाह बिल्कुल ठीक है।"</p><div class="testi-name">— रहीम खान, लुधियाना</div></div></div>
+      <div class="col-md-4"><div class="testi-card"><div class="testi-stars">★★★★★</div><p>"कारोबार बिल्कुल बंद हो गया था, हज़रत जी से मिला और तावीज़ लिया — माशाअल्लाह अब बरकत है।"</p><div class="testi-name">— सुनील वर्मा, जालंधर</div></div></div>
+      <div class="col-md-4"><div class="testi-card"><div class="testi-stars">★★★★★</div><p>"शादी में 5 साल से रुकावट थी — हज़रत जी की दुआ से 3 महीने में रिश्ता तय हो गया।"</p><div class="testi-name">— फ़रहाना बेगम, अमृतसर</div></div></div>
     </div>
-    <div class="text-center mt-4">
-      <a href="testimonials.html" class="btn btn-outline-gold">सभी समीक्षाएं देखें</a>
-    </div>
+    <div class="text-center mt-4"><a href="testimonials.html" class="btn btn-outline-gold">सभी समीक्षाएं देखें</a></div>
   </div>
 </section>
 
@@ -223,32 +340,53 @@
 <footer class="main-footer">
   <div class="container">
     <div class="row g-4">
-      <div class="col-md-4">
+      <div class="col-md-3">
         <h5>☪ हज़रत ग्यासुद्दीन अंसारी</h5>
-        <p>गोस पाक मुस्लिम इंतेज़ामिया कमेटी, लुधियाना द्वारा मान्यता प्राप्त रूहानी इलाज विशेषज्ञ।</p>
-        <p><small>पंजीकरण संख्या: 231/2024-2025</small></p>
+        <p>गोस पाक मुस्लिम इंतेज़ामिया कमेटी — पंजाब सरकार पंजीकृत।</p>
+        <p><small>पंजीकरण: 231/2024-2025</small></p>
+        <div class="footer-social mt-3">
+          <a href="https://facebook.com/YourPageName" target="_blank" class="fsb fb-s"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/919779738917" target="_blank" class="fsb wa-s"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://youtube.com/@YourChannel" target="_blank" class="fsb yt-s"><i class="fab fa-youtube"></i></a>
+        </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-3">
         <h5>त्वरित लिंक</h5>
         <ul class="footer-links">
           <li><a href="about.html">हमारे बारे में</a></li>
           <li><a href="services.html">सेवाएं</a></li>
           <li><a href="certificate.html">प्रमाण पत्र</a></li>
           <li><a href="gallery.html">वीडियो/गैलरी</a></li>
+          <li><a href="online.html">ऑनलाइन परामर्श</a></li>
+          <li><a href="testimonials.html">समीक्षाएं</a></li>
           <li><a href="contact.html">संपर्क करें</a></li>
         </ul>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-3">
+        <h5>हमारी सेवाएं</h5>
+        <ul class="footer-links">
+          <li><a href="services.html">नज़र व जादू से छुटकारा</a></li>
+          <li><a href="services.html">भूत-प्रेत मुक्ति</a></li>
+          <li><a href="services.html">शादी की रुकावट</a></li>
+          <li><a href="services.html">कारोबार व रोज़गार</a></li>
+          <li><a href="online.html">ऑनलाइन परामर्श</a></li>
+          <li><a href="services.html">दुआ-तावीज़</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
         <h5>संपर्क जानकारी</h5>
-        <p><i class="fas fa-map-marker-alt me-2"></i>स्टार कॉलोनी, स्ट्रीट नं. 10, स्टार पब्लिक स्कूल के पास, लोहारा, लुधियाना - 141016</p>
-        <p><i class="fas fa-phone me-2"></i>+91 97797 38917</p>
-        <p><i class="fab fa-whatsapp me-2"></i>WhatsApp उपलब्ध</p>
+        <p><i class="fas fa-map-marker-alt me-2" style="color:var(--gold);"></i>कॉलेज रोड, रक्सौल<br>रेलवे कॉलोनी के पास<br>वार्ड नं. 2<br>रक्सौल सेंट्रल स्कूल के पास<br>पूर्वी चम्पारण, बिहार – 845305</p>
+        <p><i class="fas fa-phone me-2" style="color:var(--gold);"></i>+91 97797 38917</p>
+        <p><i class="fab fa-facebook me-2" style="color:var(--gold);"></i><a href="https://facebook.com/YourPageName" style="color:#a8b8a0; text-decoration:none;">Facebook Page</a></p>
       </div>
     </div>
     <hr class="footer-hr">
-    <p class="text-center footer-copy">© 2024 हज़रत ग्यासुद्दीन अंसारी। सर्वाधिकार सुरक्षित। | कुरआन व सुन्नत पर आधारित रूहानी सेवा</p>
+    <p class="text-center footer-copy">© 2024 हज़रत ग्यासुद्दीन अंसारी। सर्वाधिकार सुरक्षित। | कुरआन व सुन्नत पर आधारित रूहानी सेवा | रक्सौल, बिहार</p>
   </div>
 </footer>
+
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/919779738917" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="main.js"></script>
