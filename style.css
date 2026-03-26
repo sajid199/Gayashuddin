@@ -550,12 +550,28 @@ body {
   min-height: 70vh;
   display: flex; align-items: center; justify-content: center;
   position: relative;
-  background-size: contain; background-position: center; background-repeat: no-repeat;
+  background-size: cover; background-position: center; background-repeat: no-repeat;
   background-color: #0d2b1a;
 }
 .cs1 { background-image: url('Gallary/photo1.jpeg'); }
 .cs2 { background-image: url('Gallary/photo2.jpeg'); }
 .cs3 { background-image: url('Gallary/photo3.jpeg'); }
+
+/* mobile hero background: preserve entire image without stretching */
+@media (max-width: 480px) {
+  .carousel-slide { background-size: contain; min-height: 55vh; }
+}
+
+.photo-frame img { width: 100%; height: 100%; object-fit: cover; }
+.photo-frame { height: 240px; }
+
+@media (max-width: 768px) {
+  .photo-frame { height: 170px; }
+}
+
+@media (max-width: 480px) {
+  .photo-frame { height: 140px; }
+}
 .cs4 { background: linear-gradient(135deg, #2b1a0d 0%, #3a2a1a 100%); }
 .cs5 { background: linear-gradient(135deg, #0d2b20 0%, #1a3a2d 100%); }
 .carousel-slide::before {
