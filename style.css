@@ -474,6 +474,24 @@ body {
   .stat-item:last-child { border-bottom: none; }
   .topbar .container { justify-content: center; }
   .hero-btns .btn { display: block; width: 80%; margin: 8px auto; }
+  .carousel-slide { min-height: 55vh; }
+  .carousel-content { padding: 40px 15px; }
+  .hero-title { font-size: 1.6rem; }
+  .hero-subtitle { font-size: 0.9rem; }
+  .slide-tag-hero { font-size: 0.75rem; padding: 6px 16px; }
+  .carousel-indicators button { width: 8px; height: 8px; margin: 0 3px; }
+  .carousel-indicators .active { width: 24px; }
+}
+
+@media (max-width: 480px) {
+  .carousel-slide { min-height: 50vh; background-size: contain; }
+  .carousel-content { padding: 30px 12px; }
+  .hero-title { font-size: 1.3rem; line-height: 1.3; }
+  .hero-subtitle { font-size: 0.8rem; }
+  .hero-badge { font-size: 0.7rem; padding: 4px 8px; }
+  .slide-tag-hero { font-size: 0.7rem; padding: 5px 12px; }
+  .hero-btns { display: flex; flex-direction: column; gap: 8px; }
+  .hero-btns .btn { font-size: 0.85rem; padding: 8px 16px; }
 }
 
 /* ===== POPUP ===== */
@@ -529,36 +547,41 @@ body {
 
 /* ===== HERO CAROUSEL ===== */
 .carousel-slide {
-  min-height: 90vh;
-  display: flex; align-items: center;
+  min-height: 70vh;
+  display: flex; align-items: center; justify-content: center;
   position: relative;
-  background-size: cover; background-position: center;
+  background-size: contain; background-position: center; background-repeat: no-repeat;
+  background-color: #0d2b1a;
 }
-.cs1 { background-image: url('Gallary/photo1.jpeg'); background-size: contain; background-position: center; background-repeat: no-repeat; }
-.cs2 { background-image: url('Gallary/photo2.jpeg'); background-size: contain; background-position: center; background-repeat: no-repeat; }
-.cs3 { background-image: url('Gallary/photo3.jpeg'); background-size: contain; background-position: center; background-repeat: no-repeat; }
+.cs1 { background-image: url('Gallary/photo1.jpeg'); }
+.cs2 { background-image: url('Gallary/photo2.jpeg'); }
+.cs3 { background-image: url('Gallary/photo3.jpeg'); }
 .cs4 { background: linear-gradient(135deg, #2b1a0d 0%, #3a2a1a 100%); }
 .cs5 { background: linear-gradient(135deg, #0d2b20 0%, #1a3a2d 100%); }
 .carousel-slide::before {
   content: '';
   position: absolute; inset: 0;
   background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c9a84c' fill-opacity='0.04'%3E%3Cpath d='M40 40m-30 0a30 30 0 1 1 60 0a30 30 0 1 1 -60 0'/%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
 }
 .carousel-overlay {
   position: absolute; inset: 0;
-  background: radial-gradient(ellipse at center, rgba(201,168,76,0.06) 0%, transparent 70%);
+  background: linear-gradient(to bottom, rgba(201,168,76,0.15) 0%, rgba(13,43,26,0.3) 100%);
+  pointer-events: none;
 }
 .carousel-content {
   position: relative; z-index: 2;
-  padding: 80px 20px;
+  padding: 60px 20px;
+  max-width: 600px;
 }
 .slide-tag-hero {
   display: inline-block;
-  background: rgba(201,168,76,0.2);
+  background: rgba(201,168,76,0.25);
   border: 1px solid var(--gold);
   color: var(--gold-light);
-  padding: 8px 24px; border-radius: 30px;
-  font-size: 0.9rem; margin-bottom: 16px;
+  padding: 8px 20px; border-radius: 25px;
+  font-size: 0.85rem; margin-bottom: 14px;
+  font-weight: 600;
 }
 .carousel-indicators button {
   width: 10px; height: 10px; border-radius: 50%;
